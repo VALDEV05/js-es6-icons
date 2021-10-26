@@ -34,7 +34,7 @@ header {
 }
 
 header>.container-fluid>h1 {
-    color: var(--main-color-celestial);
+    font-family: 'Acme', sans-serif;
     color: var(--main-color-celestial);
     padding-top: 8px;
 }
