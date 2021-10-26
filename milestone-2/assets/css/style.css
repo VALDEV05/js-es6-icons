@@ -1,0 +1,63 @@
+:root {
+    --main-color-background: #DDDDDD;
+    --main-color-celestial: #29B1DD;
+    --color-text: #fffff;
+    --color-animal: #0000FF;
+    --color-vegetable: #FFA500;
+    --color-user: #800080;
+}
+
+body {
+    background-color: var(--main-color-background);
+}
+
+header {
+    width: 100vw;
+    height: 60px;
+}
+
+.animal {
+    color: var(--color-animal);
+}
+
+.vegetable {
+    color: var(--color-vegetable);
+}
+
+.user {
+    color: var(--color-user);
+}
+
+.container-fluid.card {
+    height: 700px !important;
+    background-color: var(--main-color-background);
+}
+
+header>.container-fluid>h1 {
+    color: var(--main-color-celestial);
+}
+
+.select {
+    width: 100vw;
+    height: 80px;
+    background-color: var(--main-color-celestial);
+}
+
+.form-select {
+    width: auto !important;
+    margin-left: 30px;
+}
+
+.card {
+    height: 120px;
+}
+
+.card i {
+    transform: scale(2);
+}
+
+.card p {
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
