@@ -120,23 +120,40 @@ const icon = [{
 ];
 
 
-const select = document.getElementById('select')
-console.log(select.value);
+
+
 /* Milestone 3
     Creiamo una select con i tipi di icone e usiamola per filtrare le icone */
 
+
+
 const placeToPrintCard = document.querySelector('.row')
+
 icon.forEach(element => {
 
     card = `<div class="col-2 p-3">
-                <div class="card rounded-3 shadow p-3 mb-5 bg-white rounded ${element.type}">
-                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
-                        <h5 class="card-title"><i class="${element.prefix + element.name + ' ' + element.family}"></i></h5>
-                        <p>${element.name}</p>
-                    </div>
-                </div>
+            <div class="card rounded-3 shadow p-3 mb-5 bg-white rounded ${element.type}">
+            <div class="card-body d-flex justify-content-center align-items-center flex-column">
+            <h5 class="card-title"><i class="${element.prefix + element.name + ' ' + element.family}"></i></h5>
+            <p>${element.name}</p>
+            </div>
+            </div>
             </div>`
-    placeToPrintCard.innerHTML += card
+    placeToPrintCard.innerHTML += card;
 
 
 });
+console.log(iconFilter(icon, 'animal'))
+
+function iconFilter(array, type) {
+    const newArray = array.filter((element) => {
+
+        return element.type == type;
+
+    });
+    if (newArray.length > 0) {
+        return newArray;
+    }
+    return array;
+
+};
