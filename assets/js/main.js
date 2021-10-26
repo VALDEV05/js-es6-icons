@@ -121,3 +121,9 @@ const icon = [{
 
 /* Come si forma l'icona:
     prefisso + name + family */
+
+
+
+
+/*     Milestone 1
+    Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout */
