@@ -124,6 +124,18 @@ const icon = [{
 
 
 
-
 /*     Milestone 1
-    Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout */
+Partendo dalla seguente struttura dati , mostriamo in pagina tutte le icone disponibili come da layout */
+
+const placeToPrintCard = document.querySelector('.row')
+icon.forEach(element => {
+    card = `<div class="col-2 p-3">
+                <div class="card rounded-3 shadow p-3 mb-5 bg-white rounded">
+                    <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                        <h5 class="card-title"><i class="${element.prefix + element.name + ' ' + element.family}"></i></h5>
+                        <p>${element.name}</p>
+                    </div>
+                </div>
+            </div>`
+    placeToPrintCard.innerHTML += card
+});
