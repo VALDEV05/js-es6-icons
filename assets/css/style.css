@@ -16,6 +16,11 @@ header {
     height: 60px;
 }
 
+.container-fluid.card {
+    height: 700px !important;
+    background-color: var(--main-color-background);
+}
+
 header>.container-fluid>h1 {
     color: var(--main-color-celestial);
 }
@@ -29,4 +34,18 @@ header>.container-fluid>h1 {
 .form-select {
     width: auto !important;
     margin-left: 30px;
+}
+
+.card {
+    height: 120px;
+}
+
+.card i {
+    transform: scale(2);
+}
+
+.card p {
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    font-size: 20px;
 }
