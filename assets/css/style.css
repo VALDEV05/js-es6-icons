@@ -1,0 +1,10 @@
+:root {
+    --main-color-celestial: #29B1DD;
+    --color-animal: #0000FF;
+    --color-vegetable: #FFA500;
+    --color-user: #800080;
+}
+
+body {
+    background-color: var(--main-color-celestial);
+}
