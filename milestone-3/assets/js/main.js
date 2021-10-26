@@ -129,21 +129,30 @@ const icon = [{
 
 const placeToPrintCard = document.querySelector('.row')
 
-icon.forEach(element => {
+function printIcons() {
+    placeToPrintCard.innerHTML = " "
+    const select = document.getElementById('selectType')
+    console.log(select.value);
 
-    card = `<div class="col-2 p-3">
-            <div class="card rounded-3 shadow p-3 mb-5 bg-white rounded ${element.type}">
-            <div class="card-body d-flex justify-content-center align-items-center flex-column">
-            <h5 class="card-title"><i class="${element.prefix + element.name + ' ' + element.family}"></i></h5>
-            <p>${element.name}</p>
-            </div>
-            </div>
-            </div>`
-    placeToPrintCard.innerHTML += card;
+    iconFilter(icon, select.value).forEach(element => {
+
+        card = `<div class="col-2 p-3">
+                <div class="card rounded-3 shadow p-3 mb-5 bg-white rounded ${element.type}">
+                <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                <h5 class="card-title"><i class="${element.prefix + element.name + ' ' + element.family}"></i></h5>
+                <p>${element.name}</p>
+                </div>
+                </div>
+                </div>`
+        placeToPrintCard.innerHTML += card;
 
 
-});
-console.log(iconFilter(icon, 'animal'))
+    });
+
+}
+printIcons();
+const select = document.getElementById('selectType')
+select.addEventListener('change', printIcons)
 
 function iconFilter(array, type) {
     const newArray = array.filter((element) => {
